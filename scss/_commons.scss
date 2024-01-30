@@ -1,0 +1,95 @@
+
+
+//змінна для розміру контейнера//
+$maxWidth: 1920; //вказати розмір полотна
+$maxWidthContainer: 1180; //вказати розмір обмежуючого контейнера
+
+//змінні для шрифтів//
+//$ff: ;
+//$ff: ;
+//===================================
+
+//міксін для адаптивного шрифта
+@mixin adaptiv-font($pcSize, $mobSize){
+   $addSize: $pcSize - $mobSize;
+   $addMobSize: $addSize + $addSize * 0.7;
+   @media(max-width: 767px){
+      font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+   }
+   @media(min-width: 767px){
+      font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+   }
+}
+//приклад використання міксіна
+//.1{
+//   font-weight: 500;
+//   @include adaptiv-font(40,24);  де перше значення - розмір шрифту за макетом
+                                      //друге значення - бажаний розмір на розштренні в 320px   
+//}
+//==========================================================================
+
+//міксін для адаптивної влстивості
+@mixin adaptiv-value($property, $startSize, $minSize){
+   $addSize: $startSize - $minSize;
+   #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+}
+
+//приклад використання міксіна
+//.1{
+//   font-weight: 500;
+//   @include adaptiv-value(padding,40,24);  де перше значення - властивість, яку описуємо
+                                      //друге значення - розмір за макетом
+                                      //третє значення - бажаний розмір на 320px   
+//}
+//==========================================================================
+
+
+.comm-title {
+   h1{
+      color: var(--white, #FFF);
+      @include adaptiv-font(56, 30);
+      font-weight: 400;
+      line-height: 140%; /* 78.4px */
+   }
+   h2{
+      color: var(--orange, #F4900F);
+      text-align: center;
+      @include adaptiv-font(36,25);
+      font-weight: 500;
+      line-height: 140%; /* 50.4px */
+      text-transform: uppercase;
+      position: relative;
+      &::after{
+         content: "";
+         position: absolute;
+         bottom: -15px;
+         left: 50%;
+         width: 120px;
+         height: 4px;
+         background-color: #F4900F;
+         transform: translateX(-50%);
+      }
+   }
+   span{
+      color: #F4900F;
+      font-weight: 800;
+   }
+}
+
+.comm-button {
+   color: var(--white, #FFF);
+   @include adaptiv-font(16,12);
+   font-weight: 600;
+   line-height: 140%; /* 22.4px */
+   text-transform: uppercase;
+   border-radius: 4px;
+   background: linear-gradient(270deg, #EE9D00 0%, #FF7926 100%);
+   padding: 10px 40px;
+   transition: all 0.3s ease;
+   @media(min-width:768px){
+      &:hover{
+         background: var(--amber, linear-gradient(180deg, #b14706 0%, #bd7e00 100%));
+         transition: all 0.3s ease;
+      }
+   }
+}

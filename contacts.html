@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contacts</title>
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+         <div class="header__container">
+            <div class="header__logo">
+               <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
+            </div>
+            <div class="header__burger"><span></span></div>
+            <nav class="header__body-menu">
+               <ul class="menu-list">
+                  <li><a class="header-link" href="index.html">home</a></li>
+                  <li><a class="header-link" href="services.html">Services</a></li>
+                  <li><a class="header-link" href="why_cyprus.html">Why Cyprus?</a></li>
+                  <li><a class="header-link" href="faq.html">FAQs</a></li>
+                  <li class="active"><a class="header-link" href="contacts.html">contacts</a></li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+
+      <main class="page">
+
+         <section class="contacts">
+            <div class="contacts__container">
+               <form action="" class="contacts__form">
+                  <div class="contacts__form-actions">
+                     <label for="#name">Name*</label>
+                     <p><input type="text" id="name" placeholder="Enter your name"></p>
+
+                     <label for="#mail">Email*</label>
+                     <p><input type="email" id="mail" placeholder="Enter your email"></p>
+
+                     <label for="#tel">Phone number*</label>
+                     <p><input type="tel" id="tel" placeholder="Enter your phone number"></p>
+
+                     <label for="#masage">Message*</label>
+                     <p><textarea placeholder="Write your question" name="" id="masage" cols="30" rows="10"></textarea>
+                     </p>
+
+                     <div class="contacts__form-button">
+                        <button type="submit" class="comm-button">Send</button>
+                     </div>
+                  </div>
+                  <div class="contacts__form-content">
+                     <div class="contacts__form-content-title">
+                        Contact us
+                     </div>
+                     <div class="contacts__form-content-text">
+                        <a href="#">Send us an a mail</a> or start a conversation by filling out the form left. Let’s
+                        talk!
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </section>
+
+      </main>
+
+      <footer class="footer">
+         <div class="footer__container">
+            <div class="footer__item">
+               <div class="footer__item-title">
+                  AMBERKAVA CYCOR LTD
+               </div>
+               <div class="footer__item-adress">
+                  Griva Digeni 3, Patsalos House, 2nd Floor, Office 202,
+                  6030 Larnaca, Cyprus
+               </div>
+            </div>
+            <div class="footer__item">
+               <div class="footer__item-img">
+                  <img src="img/cypruscircle.webp" alt="ciprus">
+               </div>
+            </div>
+            <div class="footer__item">
+               <ul class="footer__item-links">
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="services.html">sERVICES</a></li>
+                  <li><a href="why_cyprus.html">Why Cyprus?</a></li>
+                  <li><a href="faq.html">faqS</a></li>
+               </ul>
+            </div>
+            <div class="footer__item">
+               <div class="footer__item-social-title">
+                  Follow us
+               </div>
+               <div class="footer__item-social-icons">
+                  <a href="#">
+                     <div><img src="img/linkedin.svg" alt="link"></div>
+                  </a>
+                  <a href="#">
+                     <div><img src="img/facebook.svg" alt="facebook"></div>
+                  </a>
+                  <a href="#">
+                     <div><img src="img/mailicon.svg" alt="mailicon"></div>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div class="footer__bot">
+            <div class="footer-bot__container">
+               <div class="footer__rights">
+                  © 2024 Amberkava. All rights reserved.
+               </div>
+               <div class="footer__policy">
+                  <p><a href="#">Terms of Use</a></p>
+                  <p><a href="#">Privacy Policy</a></p>
+                  <p><a href="#">Cookie Policy</a></p>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+
+   </div>
+
+
+   <!--підключаємо бібліотеку Jqery-->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <!--підключаємо js файл слайдера-->
+   <script src="js/slick.min.js"></script>
+   <!--підключаємо загальний файл JS-->
+   <script src="js/faq.js"></script>
+
+</body>
+
+</html>
